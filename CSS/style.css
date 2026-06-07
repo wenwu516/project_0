@@ -151,7 +151,7 @@ body{
 
 .content1 img{
   display: flex;
-  flex:1;
+
 }
 
 .content2{
@@ -188,54 +188,53 @@ body{
 @media (max-width: 576px) {
 
 
-  /* 1. 主容器轉成直向，寬度設為 100% */
+  
   .container {
     flex-direction: column;
     gap: 24px;
     width: 100%;
   }
 
-  /* 2. 側邊欄外殼寬度釋放 */
+  
   .container .black {
     width: 100%;
   }
 
-  /* 3. 解決選單不躺平：精準控制 ul 轉橫列與置中 */
+  
   .container .black .menu {
     display: flex;
-    flex-direction: row;     /* 確定橫列 */
-    justify-content: center; /* 確定水平置中 */
-    flex-wrap: wrap;         /* 確定放不下時會自動換行 */
+    flex-direction: row;     
+    justify-content: center; 
+    flex-wrap: wrap;         
     width: 100%;
     padding: 0;
     margin: 0;
   }
 
-  /* 4. 解決 li 的寬度問題 */
+  
   .container .black .menu li {
     display: block;
-    width: auto;             /* 讓寬度隨文字伸縮 */
-    padding: 12px 16px;      /* 縮小間距防止塞不下 */
+    width: auto;            
+    padding: 12px 16px;      
   }
 
-  /* 5. 【清除滑軌關鍵】將右側所有大內容區塊的固定寬高度通通解鎖 */
   .container .bigcontent {
     width: 100%;
   }
   
   .container .bigcontent .content {
-    flex-direction: column;  /* 卡片在手機上也變成上下疊 */
+    flex-direction: column;  
     width: 100%;
-    height: auto;            /* 解鎖電腦版的 256px 高度 */
+    height: auto;     
   }
 
   .container .bigcontent .content img {
-    width: 100%;             /* 圖片寬度滿版，不再是 550px */
-    height: auto;            /* 高度自適應 */
+    width: 100%;       
+    height: auto;            
   }
 
   .container .bigcontent .content1 {
     width: 100%;
-    height: auto;            /* 解鎖高度 */
+    height: auto;            
   }
 }
