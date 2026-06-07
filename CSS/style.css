@@ -1,0 +1,126 @@
+.topcontanier{
+    display: flex;
+    max-width: 1920px;
+    max-height: 64px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1296px;
+    height: 64px;
+    background-color: aqua;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 123px;
+    height: 28px;
+}
+
+.logoright{
+    display: flex;
+}
+
+.logoright ul{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    max-width:100%;
+    height: 380px;
+     background-image:url(https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_banner.png?raw=true);
+     background-position:center;
+     background-size:cover;
+
+    font-style:color #FFFFFF bold;
+    justify-content: center;
+
+}
+
+.bannerh1{
+    display: flex;
+    max-width: 1296px;
+    justify-content: center;
+    font-size: 80px;
+   
+}
+
+
+.container{
+  display:flex;
+  padding: 0px 16px;
+  margin: auto;
+  max-width:1328px;
+  justify-content:space-around;
+  margin-top: 80px;
+}
+
+.gap{gap:24px;}
+.black{
+  background:#24140B;
+  font-style:color #FFFFFF;
+}
+.black a{
+  font-style:color #FFFFFF;
+}
+
+.menu li{
+  display:flex;
+  justify-content:center;
+  padding-top:12px;
+  padding-bottom:12px;
+  padding-right:24px;
+  padding-left:24px;
+  font-weight:bold;
+}
+
+.bigcontent{
+  display:flex;
+  flex-direction:column;
+}
+
+.content{
+  display:flex; 
+  width: 1076px;
+  height: 256px;
+}
+
+.content1{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width: 526px;
+  height: 256px;
+}
+
+.content2{
+  padding-left:24px;
+}
+.content2 h3{
+  font-size:24px;
+  font-weight:bold;
+}
+
+.content3{
+  display:flex;
+  justify-content:space-between;
+  padding-left:24px;
+}
+.VS{
+  display: flex;
+  justify-content: end;
+}
+.VSBIG{
+  display: flex;
+  
+}
