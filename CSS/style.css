@@ -1,16 +1,45 @@
+*,
+*::before,*::after {
+  box-sizing: border-box;
+}
+img{
+  display:block;
+  max-width: 100%; 
+  object-fit:cover;
+  height: 256px;
+}
+a {
+  text-decoration:none;
+  color:#404040;
+}
+
+body{
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.5;
+  letter-spacing:0.2em;
+}
+
 .topcontanier{
     display: flex;
     max-width: 1920px;
+    width: 100%;
     max-height: 64px;
 }
+
+@media (max-width:576px) { 
+  .topcontanier {width: 100%;
+  }
+}
+
 .top{
     display: flex;
     justify-content: space-between;
     max-width: 1296px;
+    width: 100%;
     height: 64px;
-    background-color: aqua;
+    background-color: color #FDF7F1;
     margin: 0 auto;
-    padding: 10px;
+    padding: 10px 16px;
 
 }
 .logo{
@@ -41,10 +70,14 @@
      background-image:url(https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_banner.png?raw=true);
      background-position:center;
      background-size:cover;
-
-    font-style:color #FFFFFF bold;
+     font-weight:bold;
+     color: #FFFFFF;
     justify-content: center;
 
+}
+
+@media (max-width:576px) {
+  .banner{width: 576px;}
 }
 
 .bannerh1{
@@ -61,8 +94,10 @@
   padding: 0px 16px;
   margin: auto;
   max-width:1328px;
+  width: 100%;
   justify-content:space-around;
   margin-top: 80px;
+  line-height: 1.5;
 }
 
 .gap{gap:24px;}
@@ -87,11 +122,21 @@
 .bigcontent{
   display:flex;
   flex-direction:column;
+  max-width: 1076px;
+  width: 100%;
 }
 
 .content{
   display:flex; 
-  width: 1076px;
+  width: 100%;
+  height: auto;
+  min-height: 256px;
+  margin-bottom: 24px;
+}
+
+.content img{
+  max-width: 526px;  
+  width: 100%;      
   height: 256px;
 }
 
@@ -99,8 +144,14 @@
   display:flex;
   flex-direction:column;
   justify-content:center;
-  width: 526px;
+  max-width: 526px;
+  width: 100%;
   height: 256px;
+}
+
+.content1 img{
+  display: flex;
+  flex:1;
 }
 
 .content2{
@@ -111,16 +162,80 @@
   font-weight:bold;
 }
 
+
 .content3{
   display:flex;
   justify-content:space-between;
   padding-left:24px;
+}
+
+@media (max-width:576px) {
+  .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+  }
 }
 .VS{
   display: flex;
   justify-content: end;
 }
 .VSBIG{
-  display: flex;
+  display: flex; 
+}
+
+@media (max-width: 576px) {
+
+
+  /* 1. 主容器轉成直向，寬度設為 100% */
+  .container {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  /* 2. 側邊欄外殼寬度釋放 */
+  .container .black {
+    width: 100%;
+  }
+
+  /* 3. 解決選單不躺平：精準控制 ul 轉橫列與置中 */
+  .container .black .menu {
+    display: flex;
+    flex-direction: row;     /* 確定橫列 */
+    justify-content: center; /* 確定水平置中 */
+    flex-wrap: wrap;         /* 確定放不下時會自動換行 */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* 4. 解決 li 的寬度問題 */
+  .container .black .menu li {
+    display: block;
+    width: auto;             /* 讓寬度隨文字伸縮 */
+    padding: 12px 16px;      /* 縮小間距防止塞不下 */
+  }
+
+  /* 5. 【清除滑軌關鍵】將右側所有大內容區塊的固定寬高度通通解鎖 */
+  .container .bigcontent {
+    width: 100%;
+  }
   
+  .container .bigcontent .content {
+    flex-direction: column;  /* 卡片在手機上也變成上下疊 */
+    width: 100%;
+    height: auto;            /* 解鎖電腦版的 256px 高度 */
+  }
+
+  .container .bigcontent .content img {
+    width: 100%;             /* 圖片寬度滿版，不再是 550px */
+    height: auto;            /* 高度自適應 */
+  }
+
+  .container .bigcontent .content1 {
+    width: 100%;
+    height: auto;            /* 解鎖高度 */
+  }
 }
