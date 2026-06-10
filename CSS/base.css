@@ -6,7 +6,7 @@ img{
   display:block;
   max-width: 100%; 
   object-fit:cover;
-  height: 256px;
+  height: auto;
 }
 a {
   text-decoration:none;
@@ -19,6 +19,15 @@ body{
   letter-spacing:0.2em;
 }
 
+input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* 順便強制洗掉內凹陰影與預設邊框 */
+  background: transparent;
+  box-shadow: none;
+}
 
 
 
